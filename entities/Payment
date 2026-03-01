@@ -1,0 +1,106 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "student_code": {
+      "type": "string",
+      "description": "C\u00f3digo do estudante"
+    },
+    "student_name": {
+      "type": "string",
+      "description": "Nome do estudante"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Ano letivo"
+    },
+    "course": {
+      "type": "string"
+    },
+    "class_year": {
+      "type": "string"
+    },
+    "is_finalist": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_september": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_october": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_november": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_december": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_january": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_february": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_march": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_april": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_may": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_june": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuition_july": {
+      "type": "boolean",
+      "default": false,
+      "description": "Apenas para finalistas"
+    },
+    "exam_sheets_paid": {
+      "type": "boolean",
+      "default": false,
+      "description": "Folhas de prova pagas"
+    },
+    "report_card_paid": {
+      "type": "boolean",
+      "default": false,
+      "description": "Boletim pago"
+    },
+    "equipment_paid": {
+      "type": "boolean",
+      "default": false,
+      "description": "Equipamento pago"
+    },
+    "uniform_paid": {
+      "type": "boolean",
+      "default": false,
+      "description": "Uniforme pago"
+    },
+    "total_paid": {
+      "type": "number",
+      "default": 0,
+      "description": "Valor total pago"
+    },
+    "observations": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "student_code",
+    "student_name",
+    "academic_year"
+  ]
+}

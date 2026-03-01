@@ -1,0 +1,44 @@
+{
+  "name": "PaymentItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do item de pagamento"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do item"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Valor a pagar"
+    },
+    "is_mandatory": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se \u00e9 obrigat\u00f3rio"
+    },
+    "applies_to": {
+      "type": "string",
+      "enum": [
+        "todos",
+        "finalistas",
+        "10\u00aa",
+        "11\u00aa",
+        "12\u00aa",
+        "13\u00aa"
+      ],
+      "default": "todos",
+      "description": "A quem se aplica"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "amount"
+  ]
+}

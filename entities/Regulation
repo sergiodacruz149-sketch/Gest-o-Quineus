@@ -1,0 +1,30 @@
+{
+  "name": "Regulation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo do regulamento"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do regulamento"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL do arquivo PDF"
+    },
+    "uploaded_by": {
+      "type": "string",
+      "description": "Nome do secret\u00e1rio que fez upload"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "file_url"
+  ]
+}

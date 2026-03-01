@@ -1,0 +1,58 @@
+{
+  "name": "SchoolCalendarEvent",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo do evento"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do evento"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de in\u00edcio"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de fim"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "aulas",
+        "provas",
+        "feriado",
+        "ferias",
+        "atividade",
+        "reuniao"
+      ],
+      "description": "Tipo de evento"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Ano letivo"
+    },
+    "target_course": {
+      "type": "string",
+      "description": "Curso espec\u00edfico (opcional)"
+    },
+    "target_class": {
+      "type": "string",
+      "description": "Classe espec\u00edfica (opcional)"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "start_date",
+    "event_type",
+    "academic_year"
+  ]
+}

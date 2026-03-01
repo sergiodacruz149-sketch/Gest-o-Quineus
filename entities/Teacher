@@ -1,0 +1,45 @@
+{
+  "name": "Teacher",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email do utilizador associado"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Nome completo do professor"
+    },
+    "phone": {
+      "type": "string",
+      "description": "N\u00famero de telefone"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Disciplina que leciona"
+    },
+    "courses_assigned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Cursos onde leciona"
+    },
+    "classes_assigned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Turmas onde leciona"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "subject"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "BulletinFile",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo do boletim"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o"
+    },
+    "course": {
+      "type": "string",
+      "description": "Curso"
+    },
+    "class_year": {
+      "type": "string",
+      "description": "Classe"
+    },
+    "class_name": {
+      "type": "string",
+      "description": "Turma"
+    },
+    "trimester": {
+      "type": "string",
+      "enum": [
+        "1\u00ba Trimestre",
+        "2\u00ba Trimestre",
+        "3\u00ba Trimestre"
+      ],
+      "description": "Trimestre"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Ano letivo"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL do arquivo PDF"
+    },
+    "uploaded_by": {
+      "type": "string",
+      "description": "Nome do secret\u00e1rio que fez upload"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "file_url",
+    "trimester",
+    "academic_year"
+  ]
+}

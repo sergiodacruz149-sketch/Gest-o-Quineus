@@ -1,0 +1,37 @@
+{
+  "name": "Guardian",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email do utilizador associado"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Nome completo do encarregado"
+    },
+    "phone": {
+      "type": "string",
+      "description": "N\u00famero de telefone"
+    },
+    "child_name": {
+      "type": "string",
+      "description": "Nome do filho/educando"
+    },
+    "child_code": {
+      "type": "string",
+      "description": "C\u00f3digo do estudante do filho"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se o v\u00ednculo foi verificado"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "child_name",
+    "child_code"
+  ]
+}

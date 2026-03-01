@@ -1,0 +1,57 @@
+{
+  "name": "TeacherAttendance",
+  "type": "object",
+  "properties": {
+    "teacher_email": {
+      "type": "string",
+      "description": "Email do professor"
+    },
+    "teacher_name": {
+      "type": "string",
+      "description": "Nome do professor"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Presente",
+        "Falta"
+      ],
+      "description": "Estado de presen\u00e7a"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Disciplina"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Sum\u00e1rio da aula"
+    },
+    "course": {
+      "type": "string",
+      "description": "Curso"
+    },
+    "class_year": {
+      "type": "string",
+      "description": "Classe"
+    },
+    "class_name": {
+      "type": "string",
+      "description": "Turma"
+    },
+    "marked_by": {
+      "type": "string",
+      "description": "Quem marcou (professor ou secret\u00e1rio)"
+    }
+  },
+  "required": [
+    "teacher_email",
+    "teacher_name",
+    "date",
+    "status"
+  ]
+}

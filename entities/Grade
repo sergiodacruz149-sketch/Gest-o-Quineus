@@ -1,0 +1,83 @@
+{
+  "name": "Grade",
+  "type": "object",
+  "properties": {
+    "student_code": {
+      "type": "string",
+      "description": "C\u00f3digo do estudante"
+    },
+    "student_name": {
+      "type": "string",
+      "description": "Nome do estudante"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Disciplina"
+    },
+    "teacher_email": {
+      "type": "string",
+      "description": "Email do professor que lan\u00e7ou"
+    },
+    "teacher_name": {
+      "type": "string",
+      "description": "Nome do professor"
+    },
+    "trimester": {
+      "type": "string",
+      "enum": [
+        "1\u00ba Trimestre",
+        "2\u00ba Trimestre",
+        "3\u00ba Trimestre"
+      ],
+      "description": "Trimestre"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Ano letivo (ex: 2025/2026)"
+    },
+    "grade_type": {
+      "type": "string",
+      "enum": [
+        "avaliacao_continua",
+        "prova_professor",
+        "prova_trimestral",
+        "media_final"
+      ],
+      "description": "Tipo de nota"
+    },
+    "grade_name": {
+      "type": "string",
+      "description": "Nome da avalia\u00e7\u00e3o (ex: Mini-teste 1, Trabalho)"
+    },
+    "grade_value": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 20,
+      "description": "Nota (0-20)"
+    },
+    "observations": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es do professor"
+    },
+    "course": {
+      "type": "string",
+      "description": "Curso do aluno"
+    },
+    "class_year": {
+      "type": "string",
+      "description": "Classe"
+    },
+    "class_name": {
+      "type": "string",
+      "description": "Turma"
+    }
+  },
+  "required": [
+    "student_code",
+    "subject",
+    "trimester",
+    "academic_year",
+    "grade_type",
+    "grade_value"
+  ]
+}

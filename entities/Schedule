@@ -1,0 +1,60 @@
+{
+  "name": "Schedule",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo do hor\u00e1rio"
+    },
+    "course": {
+      "type": "string",
+      "description": "Curso"
+    },
+    "class_year": {
+      "type": "string",
+      "description": "Classe"
+    },
+    "class_name": {
+      "type": "string",
+      "description": "Turma"
+    },
+    "period": {
+      "type": "string",
+      "enum": [
+        "Manh\u00e3",
+        "Tarde"
+      ],
+      "description": "Per\u00edodo"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Ano letivo"
+    },
+    "schedule_data": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Dados do hor\u00e1rio extra\u00eddos"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL do arquivo original"
+    },
+    "uploaded_by": {
+      "type": "string",
+      "description": "Quem fez upload"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "course",
+    "class_year",
+    "class_name",
+    "academic_year"
+  ]
+}

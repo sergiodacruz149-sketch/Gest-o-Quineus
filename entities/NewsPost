@@ -1,0 +1,109 @@
+{
+  "name": "NewsPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo da publica\u00e7\u00e3o"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado da publica\u00e7\u00e3o"
+    },
+    "author_email": {
+      "type": "string",
+      "description": "Email do autor"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Nome do autor"
+    },
+    "author_role": {
+      "type": "string",
+      "enum": [
+        "professor",
+        "secretario"
+      ],
+      "description": "Tipo de autor"
+    },
+    "target_audience": {
+      "type": "string",
+      "enum": [
+        "todos",
+        "alunos",
+        "professores",
+        "encarregados"
+      ],
+      "default": "todos",
+      "description": "P\u00fablico alvo"
+    },
+    "target_course": {
+      "type": "string",
+      "description": "Curso espec\u00edfico (opcional)"
+    },
+    "target_class": {
+      "type": "string",
+      "description": "Turma espec\u00edfica (opcional)"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false,
+      "description": "Fixar no topo"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL da imagem (opcional)"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "likes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "IDs dos utilizadores que deram gosto"
+    },
+    "loves": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "IDs dos utilizadores que adoraram"
+    },
+    "courage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "IDs dos utilizadores que deram for\u00e7a"
+    },
+    "sad": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "IDs dos utilizadores que ficaram tristes"
+    },
+    "angry": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "IDs dos utilizadores que ficaram irritados"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "author_email",
+    "author_name",
+    "author_role"
+  ]
+}

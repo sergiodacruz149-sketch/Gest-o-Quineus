@@ -1,0 +1,161 @@
+{
+  "name": "NewsComment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "ID da publica\u00e7\u00e3o"
+    },
+    "user_credential": {
+      "type": "string",
+      "description": "Credencial do utilizador que comentou"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Nome do utilizador"
+    },
+    "user_type": {
+      "type": "string",
+      "enum": [
+        "aluno",
+        "encarregado"
+      ],
+      "description": "Tipo de utilizador"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado do coment\u00e1rio"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "post_id",
+    "user_credential",
+    "user_name",
+    "user_type",
+    "content"
+  ]
+}{
+  "name": "NewsComment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "ID da publica\u00e7\u00e3o"
+    },
+    "user_credential": {
+      "type": "string",
+      "description": "Credencial do utilizador que comentou"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Nome do utilizador"
+    },
+    "user_type": {
+      "type": "string",
+      "enum": [
+        "aluno",
+        "encarregado"
+      ],
+      "description": "Tipo de utilizador"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado do coment\u00e1rio"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "post_id",
+    "user_credential",
+    "user_name",
+    "user_type",
+    "content"
+  ]
+}{
+  "name": "NewsComment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "ID da publica\u00e7\u00e3o"
+    },
+    "user_credential": {
+      "type": "string",
+      "description": "Credencial do utilizador que comentou"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Nome do utilizador"
+    },
+    "user_type": {
+      "type": "string",
+      "enum": [
+        "aluno",
+        "encarregado"
+      ],
+      "description": "Tipo de utilizador"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado do coment\u00e1rio"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "post_id",
+    "user_credential",
+    "user_name",
+    "user_type",
+    "content"
+  ]
+}{
+  "name": "NewsComment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "ID da publica\u00e7\u00e3o"
+    },
+    "user_credential": {
+      "type": "string",
+      "description": "Credencial do utilizador que comentou"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Nome do utilizador"
+    },
+    "user_type": {
+      "type": "string",
+      "enum": [
+        "aluno",
+        "encarregado"
+      ],
+      "description": "Tipo de utilizador"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado do coment\u00e1rio"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "post_id",
+    "user_credential",
+    "user_name",
+    "user_type",
+    "content"
+  ]
+}
