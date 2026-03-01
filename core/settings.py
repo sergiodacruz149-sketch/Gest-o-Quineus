@@ -63,9 +63,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600
+        conn_max_age=600,
+        ssl_require=True  # O Render exige SSL para o Postgres
     )
-}
 
 # Validação de Senhas
 AUTH_PASSWORD_VALIDATORS = [
@@ -90,3 +90,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
