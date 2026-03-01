@@ -1,15 +1,18 @@
 import os
 from pathlib import Path
+import dj_database_url  # IMPORTAÇÃO ADICIONADA
 
 # Caminho base do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Chave secreta (Manter em segurança)
-SECRET_KEY = 'django-insecure-%ubqxwr^@yd*31f*v)da0my69ubf5gxq-ybu%&)y9zntd57w#-'
+# Chave secreta (Em produção, use variáveis de ambiente)
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-default-key-mudar-depois')
 
+# No Render, DEBUG deve ser False em produção, mas deixaremos True para você ver erros agora
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# PERMISSÃO PARA O RENDER ACESSAR O SITE
+ALLOWED_HOSTS = ['*'] 
 
 # Definição das Aplicações
 INSTALLED_APPS = [
@@ -19,15 +22,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Ferramentas para o teu React/SIGE
     'corsheaders',
     'rest_framework',
     'api', 
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', # Deve ser sempre o primeiro
+    'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # Adicionado para ficheiros estáticos
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -41,7 +44,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], # Onde ficará o teu index.html
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -56,7 +59,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# Base de Dados (SQLite por padrão)
+# CONFIGURAÇÃO DE BASE DE DADOS PARA O RENDER
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL'),
@@ -73,17 +76,17 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internacionalização
-LANGUAGE_CODE = 'pt-br' # Ajustado para Português
+LANGUAGE_CODE = 'pt-pt'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Ficheiros Estáticos (CSS, JS, Imagens do React)
+# Ficheiros Estáticos
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Configuração de Segurança para o Axios/React
+# Segurança para o React
 CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
