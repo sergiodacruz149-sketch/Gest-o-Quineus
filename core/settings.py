@@ -58,10 +58,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Base de Dados (SQLite por padrão)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600
+    )
 }
 
 # Validação de Senhas
@@ -86,3 +86,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
